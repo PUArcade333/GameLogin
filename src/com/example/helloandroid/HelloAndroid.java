@@ -24,6 +24,7 @@ import android.widget.*;
 
 public class HelloAndroid extends Activity {
 	private static final String TAG = HelloAndroid.class.getSimpleName();
+	private static final String AUTHCODE = "cos333";
 
 	/** Called when the activity is first created. */
     @Override
@@ -52,7 +53,7 @@ public class HelloAndroid extends Activity {
     		String loginurl;
     		String netidIn;
     		String pwordIn;
-    		
+    		String auth;
     		// get url/login/password from params
     		try {
 	    		loginurl = params[0];
@@ -68,6 +69,7 @@ public class HelloAndroid extends Activity {
     		ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
     		nameValuePairs.add(new BasicNameValuePair("netid", netidIn));
     		nameValuePairs.add(new BasicNameValuePair("pword", pwordIn));
+    		nameValuePairs.add(new BasicNameValuePair("auth", AUTHCODE));
     		
     		InputStream content;
     		
@@ -99,7 +101,7 @@ public class HelloAndroid extends Activity {
     	        Log.e("log_tag", "Error converting result " + e.toString());
     	        return "error";
     	    }
-    		
+    		System.out.println(output);
     		return output; // ensure non-null
     	}
     	@Override
@@ -140,6 +142,7 @@ public class HelloAndroid extends Activity {
     		nameValuePairs.add(new BasicNameValuePair("netid", netidIn));
     		nameValuePairs.add(new BasicNameValuePair("pword", pwordIn));
     		nameValuePairs.add(new BasicNameValuePair("email", emailIn));
+    		nameValuePairs.add(new BasicNameValuePair("auth", AUTHCODE));
     		
     		InputStream content;
     		
