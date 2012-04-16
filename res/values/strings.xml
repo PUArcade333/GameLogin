@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Princeton Arcade</string>
+    
+    <string name="welcometxt">Welcome to Princeton Arcade!\nPlease log in below:</string>
+    <string name="netidlabel">netid: </string>
+    <string name="passlabel">password: </string>
+    <string name="loginlabel">Login</string>
+    <string name="loggedintxt">Welcome to Princeton Arcade!</string>
+    <string name="playgame">Start!</string>
+    <string name="registerlabel">Register</string>
+    <string name="loginstatus"/>
+    <string name="confirmlabel">confirm: </string>
+    <string name="emaillabel">email: </string>
+    <string name="registerstatus"/>
+
+</resources>
